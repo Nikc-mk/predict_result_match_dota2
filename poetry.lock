@@ -100,6 +100,20 @@ pyyaml = ">=5.1"
 virtualenv = ">=20.10.0"
 
 [[package]]
+name = "pyupgrade"
+version = "3.15.2"
+description = "A tool to automatically upgrade syntax for newer versions."
+optional = false
+python-versions = ">=3.8.1"
+files = [
+    {file = "pyupgrade-3.15.2-py2.py3-none-any.whl", hash = "sha256:ce309e0ff8ecb73f56a45f12570be84bbbde9540d13697cacb261a7f595fb1f5"},
+    {file = "pyupgrade-3.15.2.tar.gz", hash = "sha256:c488d6896c546d25845712ef6402657123008d56c1063174e27aabe15bd6b4e5"},
+]
+
+[package.dependencies]
+tokenize-rt = ">=5.2.0"
+
+[[package]]
 name = "pyyaml"
 version = "6.0.1"
 description = "YAML parser and emitter for Python"
@@ -202,6 +216,17 @@ testing = ["build[virtualenv]", "filelock (>=3.4.0)", "importlib-metadata", "ini
 testing-integration = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "packaging (>=23.2)", "pytest", "pytest-enabler", "pytest-xdist", "tomli", "virtualenv (>=13.0.0)", "wheel"]
 
 [[package]]
+name = "tokenize-rt"
+version = "5.2.0"
+description = "A wrapper around the stdlib `tokenize` which roundtrips."
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "tokenize_rt-5.2.0-py2.py3-none-any.whl", hash = "sha256:b79d41a65cfec71285433511b50271b05da3584a1da144a0752e9c621a285289"},
+    {file = "tokenize_rt-5.2.0.tar.gz", hash = "sha256:9fe80f8a5c1edad2d3ede0f37481cc0cc1538a2f442c9c2f9e4feacd2792d054"},
+]
+
+[[package]]
 name = "virtualenv"
 version = "20.25.1"
 description = "Virtual Python Environment builder"
@@ -224,4 +249,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "94a1302fb13a7ddba5a9f3701a34be57b682218c3d5bcf9ff786e97ee256d5c4"
+content-hash = "f362579b00e5e237227a89079fb5fa5bec4bf706a6e7e55327af4d9a0638f809"
