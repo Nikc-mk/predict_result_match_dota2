@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "predict-result-match-dota2"
+version = "0.1.0"
+description = ""
+authors = ["None"]
+readme = "README.md"
+packages = [{include = "predict_result_match_dota2"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+ruff = "^0.3.5"
+pre-commit = "^3.7.0"
+pyupgrade = "^3.15.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # isort
+    "I",
+]
+ignore = ["F401"]

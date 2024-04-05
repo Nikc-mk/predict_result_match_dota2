@@ -1,0 +1,33 @@
+default_language_version:
+  python: python3.12
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+      - id: check-docstring-first  # проверяет распространенную ошибку определения строки документации после кода
+      - id: check-added-large-files  # предотвращает коммит гигантских файлов
+        args: [ --maxkb=2048 ]
+      - id: check-merge-conflict # проверяет наличие файлов, содержащих конфликтные строки слияния
+      - id: check-yaml # проверяет файлы yaml на наличие разборчивого синтаксиса
+      - id: check-toml
+      - id: debug-statements # checks for debugger imports
+      - id: end-of-file-fixer # гарантирует, что файл либо пуст, либо заканчивается одной новой строкой
+      - id: trailing-whitespace # обрезает конечные пробелы
+      - id: detect-private-key # обнаруживает наличие приватных ключей
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v1.25.0
+    hooks:
+      - id: pyupgrade
+        args: [ --py36-plus ]
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.3.5
+    hooks:
+      # Run the linter.
+      - id: ruff
+        types_or: [ python, pyi, jupyter ]
+        args: [ --fix ]
+      # Run the formatter.
+      - id: ruff-format
+        types_or: [ python, pyi, jupyter ]
