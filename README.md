@@ -18,8 +18,11 @@
 4. Запускаем контейнер sudo docker run -d my_image:hello_docker
 
 5. Проверяем работу контейнера sudo docker logs [CONTAINER ID]
-   Должно вывести:
+   
+Должно вывести:
+
 numpy version: 1.26.4
+
 hello world from docker!!
 
 
